@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\etani\\3D Objects\\revature\\projects\\Project0\\Project0.csproj": {}
+    "c:\\Users\\etani\\3D Objects\\revature\\projects\\ProjectZero\\Project0.csproj": {}
   },
   "projects": {
-    "C:\\Users\\etani\\3D Objects\\revature\\projects\\Project0\\Project0.csproj": {
+    "c:\\Users\\etani\\3D Objects\\revature\\projects\\ProjectZero\\Project0.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\etani\\3D Objects\\revature\\projects\\Project0\\Project0.csproj",
+        "projectUniqueName": "c:\\Users\\etani\\3D Objects\\revature\\projects\\ProjectZero\\Project0.csproj",
         "projectName": "Project0",
-        "projectPath": "C:\\Users\\etani\\3D Objects\\revature\\projects\\Project0\\Project0.csproj",
+        "projectPath": "c:\\Users\\etani\\3D Objects\\revature\\projects\\ProjectZero\\Project0.csproj",
         "packagesPath": "C:\\Users\\etani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\etani\\3D Objects\\revature\\projects\\Project0\\obj\\",
+        "outputPath": "c:\\Users\\etani\\3D Objects\\revature\\projects\\ProjectZero\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -52,6 +52,10 @@
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",
               "version": "[8.0.8, )"
             },

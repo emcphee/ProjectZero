@@ -1,20 +1,17 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore;
 
-class CustomerAccount
+public class CustomerAccount
 {
-
-    #region Properties
-    [Key]
-    public int AccountNo {get; set;}
+    public int Id {get; set;}
     public string AccountName {get; set;}
     public double AccountBalance {get; set;}
     public bool AccountIsActive {get; set;}
     public string AccountCity {get; set;}
     public string AccountPassword {get; set;}
-    #endregion
 
-    #region Methods
     public CustomerAccount(string accountName, double accountBalance, bool accountIsActive, string accountCity, string accountPassword)
     {
         AccountName = accountName;
@@ -38,6 +35,35 @@ class CustomerAccount
     {
         AccountBalance += amount;
     }
-    #endregion
+}
+class CustomerAccountConfiguration : IEntityTypeConfiguration<CustomerAccount>
+{
+    public void Configure(EntityTypeBuilder<CustomerAccount> builder)
+    {
+        // Set the primary key
+        builder.HasKey(acc => acc.Id);
+        builder.HasAlternateKey(acc => acc.AccountName);
 
+        // Set the required properties
+        builder.Property(acc => acc.AccountName)
+               .IsRequired()
+               .HasMaxLength(100); // Set a reasonable max length for the string
+
+        builder.Property(acc => acc.AccountPassword)
+               .IsRequired()
+               .HasMaxLength(100);
+
+        builder.Property(acc => acc.AccountBalance)
+               .IsRequired();
+
+        builder.Property(acc => acc.AccountIsActive)
+               .IsRequired();
+
+        builder.Property(acc => acc.AccountCity)
+               .IsRequired()
+               .HasMaxLength(100);
+
+        // Configure table name
+        builder.ToTable("CustomerAccounts");
+    }
 }

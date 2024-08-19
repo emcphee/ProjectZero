@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Project0.Migrations
 {
     [DbContext(typeof(BankDBContext))]
-    [Migration("20240814193228_NewMigration")]
+    [Migration("20240816192324_NewMigration")]
     partial class NewMigration
     {
         /// <inheritdoc />

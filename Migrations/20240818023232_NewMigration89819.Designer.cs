@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Project0.Migrations
 {
     [DbContext(typeof(BankDBContext))]
-    partial class BankDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240818023232_NewMigration89819")]
+    partial class NewMigration89819
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -110,35 +113,6 @@ namespace Project0.Migrations
                     b.ToTable("CustomerTickets", (string)null);
                 });
 
-            modelBuilder.Entity("Transaction", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<double>("Amount")
-                        .HasColumnType("float");
-
-                    b.Property<long>("UnixTimestamp")
-                        .HasColumnType("bigint");
-
-                    b.Property<int>("destinationAccountId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("sourceAccountId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("destinationAccountId");
-
-                    b.HasIndex("sourceAccountId");
-
-                    b.ToTable("Transactions", (string)null);
-                });
-
             modelBuilder.Entity("CustomerTicket", b =>
                 {
                     b.HasOne("AdminAccount", "ResponserAccount")
@@ -155,25 +129,6 @@ namespace Project0.Migrations
                     b.Navigation("ResponserAccount");
 
                     b.Navigation("SenderAccount");
-                });
-
-            modelBuilder.Entity("Transaction", b =>
-                {
-                    b.HasOne("CustomerAccount", "destinationAccount")
-                        .WithMany()
-                        .HasForeignKey("destinationAccountId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("CustomerAccount", "sourceAccount")
-                        .WithMany()
-                        .HasForeignKey("sourceAccountId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("destinationAccount");
-
-                    b.Navigation("sourceAccount");
                 });
 #pragma warning restore 612, 618
         }
