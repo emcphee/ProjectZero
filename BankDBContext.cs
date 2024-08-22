@@ -9,7 +9,6 @@ class BankDBContext : DbContext
     public DbSet<CustomerTicket> Tickets { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseLazyLoadingProxies();
         optionsBuilder.UseSqlServer("Server=DESKTOP-EN9FMHH\\SQLEXPRESS;Database=BANK_DB;User Id=user;Password=password;TrustServerCertificate=True;");
     }
 

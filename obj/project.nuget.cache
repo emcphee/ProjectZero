@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FdyWAoL/DvA=",
+  "dgSpecHash": "9R9SurtXD1k=",
   "success": true,
-  "projectFilePath": "c:\\Users\\etani\\3D Objects\\revature\\projects\\ProjectZero\\Project0.csproj",
+  "projectFilePath": "C:\\Users\\etani\\3D Objects\\revature\\projects\\ProjectZero\\Project0.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\etani\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\etani\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

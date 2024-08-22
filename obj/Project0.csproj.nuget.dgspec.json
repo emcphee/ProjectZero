@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\etani\\3D Objects\\revature\\projects\\ProjectZero\\Project0.csproj": {}
+    "C:\\Users\\etani\\3D Objects\\revature\\projects\\ProjectZero\\Project0.csproj": {}
   },
   "projects": {
-    "c:\\Users\\etani\\3D Objects\\revature\\projects\\ProjectZero\\Project0.csproj": {
+    "C:\\Users\\etani\\3D Objects\\revature\\projects\\ProjectZero\\Project0.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\etani\\3D Objects\\revature\\projects\\ProjectZero\\Project0.csproj",
+        "projectUniqueName": "C:\\Users\\etani\\3D Objects\\revature\\projects\\ProjectZero\\Project0.csproj",
         "projectName": "Project0",
-        "projectPath": "c:\\Users\\etani\\3D Objects\\revature\\projects\\ProjectZero\\Project0.csproj",
+        "projectPath": "C:\\Users\\etani\\3D Objects\\revature\\projects\\ProjectZero\\Project0.csproj",
         "packagesPath": "C:\\Users\\etani\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\etani\\3D Objects\\revature\\projects\\ProjectZero\\obj\\",
+        "outputPath": "C:\\Users\\etani\\3D Objects\\revature\\projects\\ProjectZero\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

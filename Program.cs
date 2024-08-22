@@ -1,9 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System;
-
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.EntityFrameworkCore;
+﻿using System;
 internal class Program
 {
 
@@ -231,9 +226,11 @@ internal class Program
         catch(Exception ex)
         {
             Console.WriteLine($"Error setting up new account. MSG:{ex.Message}\n");
+            Console.ReadKey();
             return null;
         }
-
+        Console.WriteLine("Account created successfully!");
+        Console.ReadKey();
         return customerAccount;
     }
 
